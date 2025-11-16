@@ -66,6 +66,21 @@
 
             <!-- All your buttons go here -->
             <div class="button-stack" role="navigation">
+              <!-- Add your own music here -->
+              <audio id="bgm" src="music.mp3" loop muted></audio>
+
+            <script>
+  const bgm = document.getElementById("bgm");
+
+  // Try to play (muted)
+  bgm.play().catch(() => {});
+
+  // When the user clicks anywhere → unmute & play
+  document.addEventListener("click", () => {
+    bgm.muted = false;
+    bgm.play();
+  });
+          </script>
 
               <!-- Default LittleLink -->
               <!--
